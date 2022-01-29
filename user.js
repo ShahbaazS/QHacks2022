@@ -12,13 +12,15 @@ class User{
         //adding the universities to the html using DOM methods.
         for (let i = 0; i < this.universities.length; i++){
             var tempUniButton = document.createElement("button"); //temporary button.
+            tempUniButton.id = i; //setting new id for the button.
+            var preTag = document.getElementById("university_section"); //the existing pre tag with id "university_section".
             tempUniButton.innerHTML = this.universities[i]; //setting the text inside the temporary button to the current university name at index i.
-            document.getElementById("university_section").appendChild(tempUniButton); //the empty pre tag, is accessed with university_section and appends the temporary button.
-            document.getElementById("university_section").innerHTML += "\n"; //the empty pre tag now appends a new line.
+            preTag.appendChild(tempUniButton); //the empty pre tag, is accessed with university_section and appends the temporary button.
+            preTag.innerHTML += "\n"; //the empty pre tag now appends a new line.
         }
-
     }
 }
+
 
 //an array of all canadian universities.
 const universities = ["Acadia University", "Algoma University", "Ambrose University", "Aurora College",
@@ -46,3 +48,15 @@ const universities = ["Acadia University", "Algoma University", "Ambrose Univers
 const user = new User(universities); //user object.
 user.initUniversities(); //adding all the universities to the html.
 console.log(user); //console log user object.
+
+//function which is executed upon clicking one of the universities.
+function nextPage(){
+    let index = event.target.id // event.srcElement is depreceated, event.target is recommended instead. Index is the button id from the onclick event. This id was made to correspond to universities[index].
+    
+    let uniChosen = universities[index]; //the university chosen.
+
+    window.location.assign("university.html"); //switching to university.html file.
+
+    localStorage.setItem("uniChosen", uniChosen); //key is the string "uniChosen" and value is the university chosen (uniChosen variable).
+    
+}
