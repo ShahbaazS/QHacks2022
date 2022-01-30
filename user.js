@@ -11,11 +11,11 @@ class User{
 
         //adding the universities to the html using DOM methods.
         for (let i = 0; i < this.universities.length; i++){
-            var tempUniButton = document.createElement("button"); //temporary button.
-            tempUniButton.id = i; //setting new id for the button.
+            var tempUniItem = document.createElement("li"); //temporary button.
+            tempUniItem.id = i; //setting new id for the button.
             var preTag = document.getElementById("university_section"); //the existing pre tag with id "university_section".
-            tempUniButton.innerHTML = this.universities[i]; //setting the text inside the temporary button to the current university name at index i.
-            preTag.appendChild(tempUniButton); //the empty pre tag, is accessed with university_section and appends the temporary button.
+            tempUniItem.innerHTML = this.universities[i]; //setting the text inside the temporary button to the current university name at index i.
+            preTag.appendChild(tempUniItem); //the empty pre tag, is accessed with university_section and appends the temporary button.
             preTag.innerHTML += "\n"; //the empty pre tag now appends a new line.
         }
     }

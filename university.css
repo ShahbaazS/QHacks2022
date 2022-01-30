@@ -1,3 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav {
+    height: 60px;
+}
+
+.navbar_links {
+    list-style: none;
+}
+
+.navbar_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar_links li a:hover{
+    color: white;
+}
+
+.logo {
+    color: white;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.dropbtn {
+    background-color: darkslategrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    /* position: absolute; */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content li {
+    cursor: pointer;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content li:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: rgb(32, 54, 54);
+  }
+
 .vertical_line{
     /*vertical line*/
     border-left: 4px solid #000000;
@@ -38,7 +129,7 @@ body{
 
 }
 
-button{
+/* button{
     background-image:linear-gradient(to top, rgb(46, 168, 168), rgb(36, 200, 255) 50%);
     background-size: 100% 200%;
     background-position: 0% 0%;
@@ -47,10 +138,12 @@ button{
     border:3px solid; 
     border-color: rgb(0, 0, 0); 
 
+    cursor: pointer;
+
     padding: 30px 150px;
 
     /* hide the overflow and center */
-    overflow: hidden; 
+    /* overflow: hidden; 
     width: 45%;
     
     margin-left:auto;
@@ -63,9 +156,8 @@ button{
     font-size: 150%;
 
     transition: 0.4s; /*button effect */
-}
+/* } */
+
 button:hover {
     background-position: 100%;
-    
-
 }
