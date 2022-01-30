@@ -8,3 +8,11 @@ class University{
 let uniChosen = localStorage.getItem("uniChosen"); //the uniChosen obtained from the local storage key "uniChosen".
 
 const university = new University(uniChosen);
+
+function addReview(){
+    let courseName = "Course Name: " + document.getElementById("course").innerHTML;
+    let courseReview = "Review: " + document.getElementById("review").innerHTML;
+
+    
+
+}
