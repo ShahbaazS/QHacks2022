@@ -55,8 +55,9 @@ function nextPage(){
     
     let uniChosen = universities[index]; //the university chosen.
 
-    window.location.replace("university.html"); //switching to university.html file.
+    window.location.assign("university.html"); //switching to university.html file.
 
     localStorage.setItem("uniChosen", uniChosen); //key is the string "uniChosen" and value is the university chosen (uniChosen variable).
+    localStorage.setItem("allUniNames", universities); //saving all the university names in the local storage.
     
 }

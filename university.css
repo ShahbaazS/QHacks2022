@@ -31,8 +31,11 @@ body{
 
 .added_reviews{
     /*position relative so the added reviews are before the title "REVIEW" div */
-    position:relative;
-    
+    position: absolute;
+    font: 'sans-serif'; 
+    font-size: large;
+    white-space: pre-line;
+
 }
 
 button{
