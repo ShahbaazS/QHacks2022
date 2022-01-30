@@ -1,0 +1,58 @@
+.vertical_line{
+    /*vertical line*/
+    border-left: 4px solid #000000;
+    height: 100%;
+    position: absolute;
+    right: 50%;
+    top:0;
+}
+
+body{
+    background-image:radial-gradient(rgb(170, 255, 255), rgb(169, 234, 255));
+}
+
+.review_university{
+    margin-left: 0 auto;
+    width: 30%;
+}
+
+.all_reviews{
+    /* position absolute this div to be top right*/
+    position:absolute;
+    top:0;
+    right:250px;
+}
+
+#submit{
+    /*the submit course review button is unaffected by the button css styles.*/
+    all: revert;
+    background-color: lightgreen;
+}
+
+.added_reviews{
+    /*position relative so the added reviews are before the title "REVIEW" div */
+    position: absolute;
+    font: 'sans-serif'; 
+    font-size: large;
+    white-space: pre-line;
+
+}
+
+button{
+    background-image:linear-gradient(rgb(46, 168, 168), rgb(36, 200, 255));
+    font: bold 84% 'sans-serif'; 
+    border:3px solid; 
+    border-color: rgb(0, 0, 0); 
+
+    padding: 30px 150px;
+
+    /* hide the overflow and center */
+    overflow: hidden; 
+    width: 45%;
+    
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+
+    font-size: 150%;
+}
