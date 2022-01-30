@@ -8,4 +8,3 @@ class University{
 let uniChosen = localStorage.getItem("uniChosen"); //the uniChosen obtained from the local storage key "uniChosen".
 
 const university = new University(uniChosen);
-console.log(window.uniChosen);
