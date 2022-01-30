@@ -3,6 +3,8 @@ class University{
         this.uniChosen = uniChosen;
         document.getElementById("university_chosen").innerHTML = this.uniChosen;
     }
+
+
 }
 
 let uniChosen = localStorage.getItem("uniChosen"); //the uniChosen obtained from the local storage key "uniChosen".
@@ -10,8 +12,8 @@ let uniChosen = localStorage.getItem("uniChosen"); //the uniChosen obtained from
 const university = new University(uniChosen);
 
 function addReview(){
-    let courseName = "Course Name: " + document.getElementById("course").innerHTML;
-    let courseReview = "Review: " + document.getElementById("review").innerHTML;
+    let courseName = "Course Name: " + document.getElementById("course").innerHTML +"\n";
+    let courseReview = "Review: " + document.getElementById("review").innerHTML + "\n";
 
     
 
