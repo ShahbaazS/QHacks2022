@@ -86,4 +86,5 @@ if(this.previousReview !== null){
 function addReview(){
     university.addReview(); //adding the course review.
     
-}   
+}
+
